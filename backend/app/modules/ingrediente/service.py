@@ -12,8 +12,8 @@ def create(session: Session, data):
     return ingrediente
 
 
-def get_all(session: Session):
-    return session.exec(select(Ingrediente)).all()
+def get_all(session: Session, limit: int):
+    return session.exec(select(Ingrediente).limit(limit)).all()
 
 
 def get_by_id(session: Session, ingrediente_id: int):

@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Path, status
 from sqlmodel import Session
+from fastapi import Query
 
 from app.core.database import get_session
 from app.modules.ingrediente import service
@@ -21,8 +22,11 @@ def create(
 
 
 @router.get("/", response_model=list[IngredienteRead], status_code=status.HTTP_200_OK)
-def get_all(session: Session = Depends(get_session)):
-    return service.get_all(session)
+def get_all(
+    limit: int = Query(10, ge=1, le=100),
+    session: Session = Depends(get_session)
+):
+    return service.get_all(session, limit)
 
 
 @router.get("/{ingrediente_id}", response_model=IngredienteRead, status_code=status.HTTP_200_OK)

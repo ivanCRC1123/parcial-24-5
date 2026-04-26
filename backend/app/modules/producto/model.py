@@ -37,5 +37,6 @@ class Producto(SQLModel, table=True):
     )
 
     ingredientes: List["Ingrediente"] = Relationship(
+        back_populates="productos",
         link_model=ProductoIngrediente
     )
