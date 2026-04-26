@@ -204,15 +204,6 @@ export const CategoriesPage = () => {
             placeholder="Descripción"
           />
 
-          <input
-            value={form.imagen_url}
-            onChange={(event) =>
-              setForm((prev) => ({ ...prev, imagen_url: event.target.value }))
-            }
-            className="rounded-lg bg-zinc-800 border border-zinc-700 p-3 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="URL imagen"
-          />
-
           {!editing && (
             <input
               value={form.parent_id}

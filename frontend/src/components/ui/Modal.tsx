@@ -12,7 +12,7 @@ export const Modal = ({ title, open, onClose, children }: ModalProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="w-full max-w-xl rounded-2xl bg-zinc-900 text-white p-6 shadow-2xl border border-zinc-700">
+      <div className="w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-2xl bg-zinc-900 text-white p-6 shadow-2xl border border-zinc-700">
         {/* HEADER */}
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-xl font-bold tracking-wide">{title}</h2>
