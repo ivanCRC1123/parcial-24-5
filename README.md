@@ -41,7 +41,7 @@ El sistema está compuesto por un backend en FastAPI con base de datos PostgreSQ
 
 ## 🔗 Video de presentación
 
-👉 [Ver video acá](PEGÁ_ACÁ_TU_LINK)
+👉 [Ver video acá](https://youtu.be/p2klSAbQZUI)
 
 ---
 
